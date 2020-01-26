@@ -1,4 +1,7 @@
-const purgecss = require('@fullhuman/postcss-purgecss')
+const purgecss = require('@fullhuman/postcss-purgecss')({
+  content: ['./src/**/*.html', './src/**/*.component.ts'],
+  defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
+});
 module.exports = {
   module: {
     rules: [
@@ -10,9 +13,7 @@ module.exports = {
             options: {
               plugins: [
                 require("tailwindcss")("./tailwind.config.js"),
-                purgecss({
-                  content: ['./src/*.html']
-                })
+                purgecss
               ]
             }
           }
