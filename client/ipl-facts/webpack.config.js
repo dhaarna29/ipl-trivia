@@ -7,7 +7,11 @@ module.exports = {
             {
               loader: "postcss-loader",
               options: {
-                plugins: [require("tailwindcss")("./tailwind.config.js")]
+                plugins: [require("tailwindcss")("./tailwind.config.js"),
+			purgecss({
+              content: ['./src/*.html']
+            })			
+]
               }
             }
           ]
