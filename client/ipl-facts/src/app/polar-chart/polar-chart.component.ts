@@ -6,7 +6,6 @@ import colors from '../../chartColours.json';
 @Component({
   selector: 'app-polar-chart',
   template: '<canvas id="polChart" width="700" height="300"></canvas>',
-  styleUrls: ['./polar-chart.component.scss']
 })
 export class PolarChartComponent implements OnInit {
 

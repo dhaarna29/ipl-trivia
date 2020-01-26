@@ -5,7 +5,6 @@ import season_json from '../../../../../data/season_wins.json';
 @Component({
   selector: 'app-line-chart',
   template: '<canvas id="lineChart" width="600" height="300"></canvas>',
-  styleUrls: ['./line-chart.component.scss']
 })
 export class LineChartComponent implements OnInit {
 

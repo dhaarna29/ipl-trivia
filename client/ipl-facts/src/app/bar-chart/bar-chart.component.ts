@@ -6,7 +6,6 @@ import bgColor from '../../chartColours.json';
 @Component({
   selector: 'app-bar-chart',
   template: '<canvas id="barChart" width="700" height="300"></canvas>',
-  styleUrls: ['./bar-chart.component.scss']
 })
 export class BarChartComponent implements OnInit {
 title = 'ipl-facts';

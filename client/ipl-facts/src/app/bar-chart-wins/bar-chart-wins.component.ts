@@ -5,7 +5,6 @@ import wins_json from '../../../../../data/team_wins.json';
 @Component({
   selector: 'app-bar-chart-wins',
   template: '<canvas id="barChartWins" width="700" height="300"></canvas>',
-  styleUrls: ['./bar-chart-wins.component.scss']
 })
 export class BarChartWinsComponent implements OnInit {
 

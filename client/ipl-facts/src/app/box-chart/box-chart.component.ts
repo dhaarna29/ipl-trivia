@@ -5,7 +5,6 @@ import season_json from '../../../../../data/team_scores.json';
 @Component({
   selector: 'app-box-chart',
   template: '<canvas id="boxChart" width="700" height="300"></canvas>',
-  styleUrls: ['./box-chart.component.scss']
 })
 export class BoxChartComponent implements OnInit {
 
