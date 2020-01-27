@@ -15,8 +15,8 @@ export class PieChartComponent implements OnInit {
   canvas: any;
   ctx: any;
   ngOnInit() {
-    var labels=[], data=[], colors=[];
-    for(var i=0; i<json_data.data.length; i++){
+    var labels = [], data = [], colors = [];
+    for (var i = 0; i < json_data.data.length; i++) {
       labels.push(json_data.data[i].win_type);
       data.push(json_data.data[i].count);
       colors.push(bgColor.backgroundColor[i]);
@@ -26,20 +26,20 @@ export class PieChartComponent implements OnInit {
     let myChart = new Chart(this.ctx, {
       type: 'pie',
       data: {
-          labels: labels,
-          datasets: [{
-              label: '# of Votes',
-              data: data,
-              borderWidth: 1,
-              backgroundColor: colors
-          }]
+        labels: labels,
+        datasets: [{
+          label: '# of Votes',
+          data: data,
+          borderWidth: 1,
+          backgroundColor: colors
+        }]
       },
       options: {
-        legend:{
+        legend: {
           position: "right"
-        }
+        },
       }
     });
 
-}
+  }
 }

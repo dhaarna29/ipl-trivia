@@ -15,8 +15,8 @@ export class PolarChartComponent implements OnInit {
   canvas: any;
   ctx: any;
   ngOnInit() {
-    var labels=[], data=[], bgColors=[];
-    for(var i=0; i<json_data.data.length; i++){
+    var labels = [], data = [], bgColors = [];
+    for (var i = 0; i < json_data.data.length; i++) {
       labels.push(json_data.data[i].player_name);
       data.push(json_data.data[i].count);
       bgColors.push(colors.backgroundColor[i]);
@@ -26,18 +26,18 @@ export class PolarChartComponent implements OnInit {
     let myChart = new Chart(this.ctx, {
       type: 'polarArea',
       data: {
-          labels: labels,
-          datasets: [{
-              label: '# of Votes',
-              data: data,
-              borderWidth: 1,
-              backgroundColor: bgColors
-          }]
+        labels: labels,
+        datasets: [{
+          label: '# of Votes',
+          data: data,
+          borderWidth: 1,
+          backgroundColor: bgColors
+        }]
       },
       options: {
-        legend:{
+        legend: {
           position: "right"
-        }
+        },
       }
     });
   }

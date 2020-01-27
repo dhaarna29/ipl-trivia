@@ -12,8 +12,8 @@ export class LineChartComponent implements OnInit {
   canvas: any;
   ctx: any;
   ngOnInit() {
-    var labels=[], data=[];
-    for(var i=0; i<json_data.data.length; i++){
+    var labels = [], data = [];
+    for (var i = 0; i < json_data.data.length; i++) {
       labels.push(json_data.data[i].season);
       data.push(json_data.data[i].count);
     }
@@ -22,28 +22,28 @@ export class LineChartComponent implements OnInit {
     let myChart = new Chart(this.ctx, {
       type: 'line',
       data: {
-          labels: labels,
-          datasets: [{
-              label: '# of Matches Won',
-              data: data,
-              fill: false,
-              borderWidth: 2,
-              borderColor: '#2f4b7c'
-          }]
+        labels: labels,
+        datasets: [{
+          label: '# of Matches Won',
+          data: data,
+          fill: false,
+          borderWidth: 2,
+          borderColor: '#2f4b7c'
+        }]
       },
       options: {
-        legend:{
+        legend: {
           display: false
         },
-        scales:{
-          xAxes:[{
+        scales: {
+          xAxes: [{
             gridLines: false
           }],
         }
       },
-      
+
     });
 
-}
+  }
 
 }
