@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as Chart from 'chart.js';
-import wins_json from '../../../../../data/team_wins.json';
+import json_data from '../../../../../data/team_wins.json';
 
 @Component({
   selector: 'app-bar-chart-wins',
@@ -14,7 +14,6 @@ export class BarChartWinsComponent implements OnInit {
 canvas: any;
 ctx: any;
 ngOnInit() {
-  var json_data = wins_json;
   var labels=[], data=[];
   for(var i=0; i<json_data.data.length; i++){
     labels.push(json_data.data[i].team_name);

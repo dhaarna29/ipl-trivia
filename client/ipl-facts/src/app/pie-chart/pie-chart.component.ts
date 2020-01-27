@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as Chart from 'chart.js'
-import win_json from '../../../../../data/win_type.json';
+import json_data from '../../../../../data/win_type.json';
 import bgColor from '../../chartColours.json';
 
 @Component({
@@ -15,7 +15,6 @@ export class PieChartComponent implements OnInit {
   canvas: any;
   ctx: any;
   ngOnInit() {
-    var json_data = win_json;
     var labels=[], data=[], colors=[];
     for(var i=0; i<json_data.data.length; i++){
       labels.push(json_data.data[i].win_type);

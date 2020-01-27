@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as Chart from 'chart.js'
-import motm_json from '../../../../../data/motm.json';
+import json_data from '../../../../../data/motm.json';
 import colors from '../../chartColours.json';
 
 @Component({
@@ -15,11 +15,10 @@ export class PolarChartComponent implements OnInit {
   canvas: any;
   ctx: any;
   ngOnInit() {
-    var motm = motm_json;
     var labels=[], data=[], bgColors=[];
-    for(var i=0; i<motm.data.length; i++){
-      labels.push(motm.data[i].player_name);
-      data.push(motm.data[i].count);
+    for(var i=0; i<json_data.data.length; i++){
+      labels.push(json_data.data[i].player_name);
+      data.push(json_data.data[i].count);
       bgColors.push(colors.backgroundColor[i]);
     }
     this.canvas = document.getElementById('polChart');

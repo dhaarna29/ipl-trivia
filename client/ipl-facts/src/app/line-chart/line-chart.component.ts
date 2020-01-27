@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as Chart from 'chart.js'
-import season_json from '../../../../../data/season_wins.json';
+import json_data from '../../../../../data/season_wins.json';
 
 @Component({
   selector: 'app-line-chart',
@@ -14,7 +14,6 @@ export class LineChartComponent implements OnInit {
   canvas: any;
   ctx: any;
   ngOnInit() {
-    var json_data = season_json;
     var labels=[], data=[];
     for(var i=0; i<json_data.data.length; i++){
       labels.push(json_data.data[i].season);

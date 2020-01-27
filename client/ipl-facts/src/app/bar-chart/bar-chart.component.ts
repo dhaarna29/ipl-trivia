@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as Chart from 'chart.js'
-import season_json from '../../../../../data/team_bounds.json';
+import json_data from '../../../../../data/team_bounds.json';
 import bgColor from '../../chartColours.json';
 
 @Component({
@@ -12,7 +12,6 @@ title = 'ipl-facts';
 canvas: any;
 ctx: any;
 ngOnInit() {
-  var json_data = season_json;
   var labels=[], data=[], bgColors=[];
   for(var i=0; i<json_data.data.length; i++){
     labels.push(json_data.data[i].team_name);
