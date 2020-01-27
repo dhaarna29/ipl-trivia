@@ -30,10 +30,6 @@ ngOnInit() {
             borderWidth: 1,
             backgroundColor: bgColors
         }]
-    },
-    options: {
-      responsive: false,
-      display:true
     }
   });
 

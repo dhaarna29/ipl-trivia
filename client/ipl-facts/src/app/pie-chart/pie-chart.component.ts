@@ -5,7 +5,7 @@ import bgColor from '../../chartColours.json';
 
 @Component({
   selector: 'app-pie-chart',
-  template: '<canvas id="pieChart" width="500" height="300"></canvas>',
+  template: '<canvas id="pieChart"></canvas>',
 })
 export class PieChartComponent implements OnInit {
 
@@ -35,8 +35,6 @@ export class PieChartComponent implements OnInit {
           }]
       },
       options: {
-        responsive: false,
-        display:true,
         legend:{
           position: "right"
         }

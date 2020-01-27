@@ -4,12 +4,9 @@ import json_data from '../../../../../data/team_scores.json';
 
 @Component({
   selector: 'app-box-chart',
-  template: '<canvas id="boxChart" width="700" height="300"></canvas>',
+  template: '<canvas id="boxChart"></canvas>',
 })
 export class BoxChartComponent implements OnInit {
-
-  constructor() { }
-
   title = 'ipl-facts';
   canvas: any;
   ctx: any;
@@ -42,14 +39,9 @@ export class BoxChartComponent implements OnInit {
         ]
       },
       options: {
-        responsive: false,
-        display: true,
         scales: {
           xAxes: [{
             display: false
-          }],
-          yAxes: [{
-            color: "white"
           }]
         }
       }

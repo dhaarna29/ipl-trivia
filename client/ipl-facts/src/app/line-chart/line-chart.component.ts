@@ -4,11 +4,9 @@ import json_data from '../../../../../data/season_wins.json';
 
 @Component({
   selector: 'app-line-chart',
-  template: '<canvas id="lineChart" width="600" height="300"></canvas>',
+  template: '<canvas id="lineChart"></canvas>',
 })
 export class LineChartComponent implements OnInit {
-
-  constructor() { }
 
   title = 'ipl-facts';
   canvas: any;
@@ -34,8 +32,6 @@ export class LineChartComponent implements OnInit {
           }]
       },
       options: {
-        responsive: false,
-        display:true,
         legend:{
           display: false
         },

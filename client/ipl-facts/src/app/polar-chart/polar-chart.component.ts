@@ -5,7 +5,7 @@ import colors from '../../chartColours.json';
 
 @Component({
   selector: 'app-polar-chart',
-  template: '<canvas id="polChart" width="700" height="300"></canvas>',
+  template: '<canvas id="polChart"></canvas>',
 })
 export class PolarChartComponent implements OnInit {
 
@@ -35,8 +35,6 @@ export class PolarChartComponent implements OnInit {
           }]
       },
       options: {
-        responsive: false,
-        display:true,
         legend:{
           position: "right"
         }
